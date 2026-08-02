@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "./ui/button";
 import Card from "./ui/card";
-import { Slider } from "./ui/slider"; // Let's make an inline slider to ensure self-containment
 
 export default function Calculator() {
   const [bill, setBill] = useState<number>(4500);
