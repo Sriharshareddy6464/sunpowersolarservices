@@ -20,9 +20,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustStrip />
-      <CalculatorSection />
       <WhySolar />
       <HowSolarWorks />
+      <CalculatorSection />
       <Packages />
       <SubsidyGuide />
       <LoanJourney />

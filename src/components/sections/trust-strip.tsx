@@ -53,6 +53,21 @@ export default function TrustStrip() {
             </Card>
           ))}
         </div>
+
+        {/* Local DISCOM trust sub-bar */}
+        <div className="mt-10 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-6 text-slate-500 text-xs font-semibold text-center">
+          <span className="flex items-center gap-1.5 text-slate-700">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> MNRE Approved Vendor
+          </span>
+          <span className="hidden md:inline">•</span>
+          <span className="flex items-center gap-1.5 text-slate-700">
+            <CheckCircle2 className="w-4 h-4 text-sky-500" /> TSSPDCL & TSNPDCL Net Metering Compliant
+          </span>
+          <span className="hidden md:inline">•</span>
+          <span className="flex items-center gap-1.5 text-slate-700">
+            <CheckCircle2 className="w-4 h-4 text-amber-500" /> PM Surya Ghar Portal Registered
+          </span>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Inter, Space_Grotesk } from "next/font/google";
+import SEOSchema from "@/components/seo-schema";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -45,9 +46,9 @@ export default function RootLayout({
       className={`${manrope.variable} ${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-slate-50 text-slate-900 font-sans selection:bg-amber-100 selection:text-amber-800 flex flex-col">
+        <SEOSchema />
         {children}
       </body>
     </html>
   );
 }
-

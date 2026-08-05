@@ -30,6 +30,16 @@ const faqs = [
       "Your system remains grid-connected, so you continue to draw electricity from the utility grid on cloudy or rainy days. During sunny periods, any surplus power you generate is fed back to the grid through net metering, earning you credits that offset your nighttime or cloudy-day consumption.",
   },
   {
+    question: "What happens during a power cut / grid outage?",
+    answer:
+      "For safety reasons mandated by grid regulations, standard grid-tied solar inverters automatically shut off during a power cut to protect utility workers servicing the lines. If continuous power backup during outages is critical for your home or business, we offer hybrid solar systems equipped with battery storage that seamlessly switch to backup power during power cuts.",
+  },
+  {
+    question: "Is net metering available for TSSPDCL & TSNPDCL customers?",
+    answer:
+      "Yes! We are an official MNRE-registered solar vendor in Telangana. We handle the entire end-to-end net meter approval, bi-directional meter procurement, and installation process with TSSPDCL (Telangana State Southern Power Distribution) and TSNPDCL.",
+  },
+  {
     question: "How long does installation take?",
     answer:
       "From the initial site survey to final handover, our full installation process is completed within 21 days. This includes DISCOM approvals, MNRE portal registration, physical installation, and net meter connection. We provide daily updates throughout the process.",
