@@ -2,32 +2,23 @@
 
 import React from "react";
 import Button from "../ui/button";
-import MoltenMetal from "../MoltenMetal";
+import Prism from "../prism";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen h-screen flex flex-col justify-between items-center pt-16 pb-0 overflow-hidden bg-slate-900 text-white">
-      {/* Background MoltenMetal Shader Component */}
-      <div className="absolute inset-0 z-0 opacity-80" style={{ width: "100%", height: "100%", position: "absolute" }}>
-        <MoltenMetal
-          color1="#5227FF"
-          color2="#FF9FFC"
-          color3="#FFFFFF"
-          speed={0.35}
-          scale={4}
-          detail={3}
-          glow={1.6}
-          coreSize={0.1}
-          swirl={1}
-          fold={-0.2}
-          blackPoint={0.05}
-          brightness={1.3}
-          colorMode="molten"
-          grain
-          grainIntensity={0.05}
-          mouseInteraction
-          mouseStrength={0.3}
-          opacity={1}
+      {/* Background Prism WebGL Component */}
+      <div className="absolute inset-0 z-0 opacity-80 overflow-hidden" style={{ width: "100%", height: "100%", position: "absolute" }}>
+        <Prism
+          animationType="rotate"
+          timeScale={0.5}
+          height={3.5}
+          baseWidth={5.5}
+          scale={3.6}
+          hueShift={0}
+          colorFrequency={1}
+          noise={0}
+          glow={1}
         />
         {/* Soft overlay to ensure readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/50 to-slate-950/90 z-10 pointer-events-none" />
