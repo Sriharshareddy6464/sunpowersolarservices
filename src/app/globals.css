@@ -19,6 +19,18 @@
   --radius-card: 16px;
 }
 
+/* Hide vertical & horizontal scrollbars globally across all browsers */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0px;
+  background: transparent;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
@@ -47,4 +59,3 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
-
