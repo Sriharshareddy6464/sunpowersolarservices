@@ -50,25 +50,25 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white relative">
+    <section id="projects" className="py-20 bg-slate-900 text-white border-t border-white/5 relative">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 bg-primary/10 text-dark font-bold text-xs uppercase tracking-wider rounded-full mb-3">
+          <span className="inline-block px-3.5 py-1 bg-primary/10 text-primary border border-primary/20 font-bold text-xs uppercase tracking-wider rounded-full mb-3">
             Our Work
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-dark mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4">
             Previous Installations Across Hyderabad
           </h2>
-          <p className="text-slate-600 font-sans">
+          <p className="text-slate-300 font-sans text-sm md:text-base">
             Hundreds of happy homes and businesses are already running on Sun Power Solar. Here are some of our recent projects.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {projects.map((proj, idx) => (
-            <Card key={idx} variant="flat" className="overflow-hidden group cursor-pointer border-slate-100 hover:shadow-xl hover:-translate-y-1">
+            <Card key={idx} variant="glass-dark" className="overflow-hidden group cursor-pointer border border-white/10 hover:border-primary/40 hover:-translate-y-1">
               {/* Image */}
-              <div className="relative w-full h-52 overflow-hidden bg-slate-100">
+              <div className="relative w-full h-52 overflow-hidden bg-slate-800">
                 <Image
                   src={proj.src}
                   alt={proj.alt}
@@ -84,13 +84,13 @@ export default function Projects() {
                 </div>
               </div>
               {/* Card Footer */}
-              <div className="p-5 flex justify-between items-center">
+              <div className="p-5 flex justify-between items-center bg-white/5">
                 <div>
-                  <p className="font-bold text-sm text-dark">{proj.alt}</p>
+                  <p className="font-bold text-sm text-white">{proj.alt}</p>
                   <p className="text-xs text-slate-400 mt-0.5">{proj.location}</p>
                 </div>
                 <div className="text-right">
-                  <span className="font-numbers font-extrabold text-xl text-dark">{proj.size}</span>
+                  <span className="font-numbers font-extrabold text-xl text-primary">{proj.size}</span>
                   <p className="text-xs text-slate-400">System Size</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Projects() {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="md" href="#contact">
+          <Button variant="primary" size="md" href="#contact">
             Get a Quote for Your Project
           </Button>
         </div>

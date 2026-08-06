@@ -60,16 +60,16 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 bg-white relative">
+    <section id="faq" className="py-20 bg-slate-900 text-white border-t border-white/5 relative">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 bg-primary/10 text-dark font-bold text-xs uppercase tracking-wider rounded-full mb-3">
+          <span className="inline-block px-3.5 py-1 bg-primary/10 text-primary border border-primary/20 font-bold text-xs uppercase tracking-wider rounded-full mb-3">
             Common Questions
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-dark mb-4">
-            Everything You Need to Know
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+            What&apos;s Stopping You?
           </h2>
-          <p className="text-slate-600 font-sans">
+          <p className="text-slate-300 font-sans text-sm md:text-base">
             Addressing the most common concerns about switching to solar — honestly and clearly.
           </p>
         </div>
@@ -82,8 +82,8 @@ export default function FAQ() {
                 key={idx}
                 className={`border rounded-[16px] overflow-hidden transition-all duration-300 ${
                   isOpen
-                    ? "border-primary/30 shadow-md bg-amber-50/30"
-                    : "border-slate-100 bg-white hover:border-slate-200"
+                    ? "border-primary/40 shadow-md bg-white/10"
+                    : "border-white/10 bg-white/5 hover:border-white/20"
                 }`}
               >
                 <button
@@ -93,7 +93,7 @@ export default function FAQ() {
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   className="w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer"
                 >
-                  <span className={`font-bold text-sm md:text-base pr-4 ${isOpen ? "text-dark" : "text-slate-700"}`}>
+                  <span className={`font-bold text-sm md:text-base pr-4 ${isOpen ? "text-primary" : "text-white"}`}>
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -111,7 +111,7 @@ export default function FAQ() {
                     isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="px-5 md:px-6 pb-5 md:pb-6 text-sm text-slate-600 leading-relaxed font-sans">
+                  <p className="px-5 md:px-6 pb-5 md:pb-6 text-sm text-slate-300 leading-relaxed font-sans">
                     {faq.answer}
                   </p>
                 </div>

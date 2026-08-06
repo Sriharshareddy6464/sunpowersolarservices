@@ -13,7 +13,7 @@ export default function Testimonials() {
       system: "3 kW Residential",
       savings: "₹3,200/mo",
       avatar: "R",
-      color: "bg-primary",
+      color: "bg-primary text-dark",
     },
     {
       name: "Narayana Reddy",
@@ -24,7 +24,7 @@ export default function Testimonials() {
       system: "4 kW Residential",
       savings: "₹4,100/mo",
       avatar: "N",
-      color: "bg-secondary",
+      color: "bg-secondary text-white",
     },
     {
       name: "Sridevi",
@@ -35,56 +35,49 @@ export default function Testimonials() {
       system: "10 kW Residential",
       savings: "₹9,800/mo",
       avatar: "S",
-      color: "bg-accent",
+      color: "bg-accent text-white",
     },
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-slate-50 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-
+    <section id="testimonials" className="py-20 bg-slate-900 text-white border-t border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 bg-accent/10 text-accent font-bold text-xs uppercase tracking-wider rounded-full mb-3">
+          <span className="inline-block px-3.5 py-1 bg-accent/10 text-accent border border-accent/20 font-bold text-xs uppercase tracking-wider rounded-full mb-3">
             Customer Stories
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-dark mb-4">
-            What Our Happy Customers Say
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+            Meet Families Who Already Switched
           </h2>
-          <p className="text-slate-600 font-sans">
+          <p className="text-slate-300 font-sans text-sm md:text-base">
             Real people. Real savings. Real transformations across Hyderabad.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {reviews.map((rv, idx) => (
-            <Card key={idx} variant="flat" className="p-8 border-slate-100 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between bg-white h-full">
+            <Card key={idx} variant="glass-dark" className="p-8 border border-white/10 hover:border-primary/40 hover:-translate-y-1 flex flex-col justify-between h-full">
               <div className="space-y-5">
-                {/* Quote icon */}
-                <Quote className="w-8 h-8 text-slate-200" />
+                <Quote className="w-8 h-8 text-white/20" />
 
-                {/* Rating */}
                 <div className="flex gap-1">
                   {Array.from({ length: rv.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-primary fill-primary" />
                   ))}
                 </div>
 
-                {/* Title + text */}
                 <div>
-                  <h3 className="font-extrabold text-dark text-lg mb-3">&ldquo;{rv.title}&rdquo;</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed font-sans">{rv.text}</p>
+                  <h3 className="font-extrabold text-white text-lg mb-3">&ldquo;{rv.title}&rdquo;</h3>
+                  <p className="text-sm text-slate-300 leading-relaxed font-sans">{rv.text}</p>
                 </div>
               </div>
 
-              {/* Customer Info */}
-              <div className="mt-6 pt-5 border-t border-slate-100 flex items-center gap-4">
-                <div className={`w-12 h-12 rounded-full ${rv.color} flex items-center justify-center text-white font-extrabold text-lg flex-shrink-0`}>
+              <div className="mt-6 pt-5 border-t border-white/10 flex items-center gap-4">
+                <div className={`w-12 h-12 rounded-full ${rv.color} flex items-center justify-center font-extrabold text-lg flex-shrink-0`}>
                   {rv.avatar}
                 </div>
                 <div>
-                  <p className="font-bold text-dark text-sm">{rv.name}</p>
+                  <p className="font-bold text-white text-sm">{rv.name}</p>
                   <p className="text-xs text-slate-400">{rv.location}</p>
                 </div>
                 <div className="ml-auto text-right">
@@ -96,15 +89,14 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Aggregate Rating */}
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
           <div className="flex gap-1">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} className="w-5 h-5 text-primary fill-primary" />
             ))}
           </div>
-          <p className="text-dark font-bold text-base">
-            <span className="font-numbers">4.9/5</span> average rating from 200+ installations across Telangana
+          <p className="text-white font-bold text-base">
+            <span className="font-numbers text-primary">4.9/5</span> average rating from 200+ installations across Telangana
           </p>
         </div>
       </div>

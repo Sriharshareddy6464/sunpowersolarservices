@@ -59,8 +59,8 @@ export default function ContactForm() {
               <span className="inline-block px-3 py-1 bg-primary/20 text-primary font-bold text-xs uppercase tracking-wider rounded-full mb-4">
                 Get in Touch
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
-                Get Your Free Site Inspection Today
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+                ☎️ Curious About Your Roof?
               </h2>
               <p className="text-slate-300 leading-relaxed font-sans text-sm md:text-base">
                 Fill in your details and our solar expert will contact you within 24 hours to schedule a free site inspection and custom quote — no obligations.
