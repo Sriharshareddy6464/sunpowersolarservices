@@ -6,7 +6,7 @@ import MoltenMetal from "../MoltenMetal";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-between items-center pt-16 pb-0 overflow-hidden bg-slate-900 text-white">
+    <section className="relative min-h-screen h-screen flex flex-col justify-between items-center pt-16 pb-0 overflow-hidden bg-slate-900 text-white">
       {/* Background MoltenMetal Shader Component */}
       <div className="absolute inset-0 z-0 opacity-80" style={{ width: "100%", height: "100%", position: "absolute" }}>
         <MoltenMetal
@@ -30,7 +30,7 @@ export default function Hero() {
           opacity={1}
         />
         {/* Soft overlay to ensure readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/60 to-slate-900 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/50 to-slate-950/90 z-10 pointer-events-none" />
       </div>
 
       {/* Main hero content shifted 10px towards bottom */}
@@ -59,8 +59,8 @@ export default function Hero() {
             </Button>
           </div>
 
-          {/* Quick trust metrics - clean spacing without small line */}
-          <div className="pt-10 pb-6 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          {/* Quick trust metrics with generous space below */}
+          <div className="pt-10 pb-16 grid grid-cols-3 gap-4 max-w-lg mx-auto">
             <div>
               <span className="block text-2xl md:text-3xl font-numbers font-bold text-primary">25+</span>
               <span className="text-xs text-slate-300 uppercase font-semibold tracking-wider">Years Warranty</span>
@@ -78,8 +78,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Horizontal line moved to the complete bottom boundary of the screen */}
-      <div className="w-full relative z-20 border-b border-white/20" />
+      {/* Gradual blur transition overlay into next section */}
+      <div className="w-full relative z-20">
+        <div className="w-full h-16 bg-gradient-to-b from-transparent via-slate-950/60 to-slate-950 backdrop-blur-md border-b border-white/20" />
+      </div>
     </section>
   );
 }
