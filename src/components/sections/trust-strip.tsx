@@ -32,22 +32,22 @@ export default function TrustStrip() {
   ];
 
   return (
-    <section className="py-12 bg-white border-y border-slate-100 relative z-10">
+    <section className="py-12 bg-slate-900 text-white border-y border-white/5 relative z-10">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {points.map((pt, idx) => (
             <Card
               key={idx}
-              variant="flat"
-              className="p-5 border-slate-100 hover:border-primary/30 flex flex-col justify-between hover:shadow-md h-full"
+              variant="glass-dark"
+              className="p-5 border border-white/10 hover:border-primary/40 flex flex-col justify-between h-full"
             >
               <div className="space-y-4">
-                <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                   {pt.icon}
                 </div>
                 <div>
-                  <h4 className="font-extrabold text-sm text-dark mb-1">{pt.title}</h4>
-                  <p className="text-xs text-slate-500 leading-relaxed font-sans">{pt.desc}</p>
+                  <h4 className="font-extrabold text-sm text-white mb-1">{pt.title}</h4>
+                  <p className="text-xs text-slate-400 leading-relaxed font-sans">{pt.desc}</p>
                 </div>
               </div>
             </Card>
@@ -55,17 +55,17 @@ export default function TrustStrip() {
         </div>
 
         {/* Local DISCOM trust sub-bar */}
-        <div className="mt-10 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-6 text-slate-500 text-xs font-semibold text-center">
-          <span className="flex items-center gap-1.5 text-slate-700">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> MNRE Approved Vendor
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-slate-400 text-xs font-semibold text-center">
+          <span className="flex items-center gap-1.5 text-slate-300">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" /> MNRE Approved Vendor
           </span>
           <span className="hidden md:inline">•</span>
-          <span className="flex items-center gap-1.5 text-slate-700">
-            <CheckCircle2 className="w-4 h-4 text-sky-500" /> TSSPDCL & TSNPDCL Net Metering Compliant
+          <span className="flex items-center gap-1.5 text-slate-300">
+            <CheckCircle2 className="w-4 h-4 text-sky-400" /> TSSPDCL & TSNPDCL Net Metering Compliant
           </span>
           <span className="hidden md:inline">•</span>
-          <span className="flex items-center gap-1.5 text-slate-700">
-            <CheckCircle2 className="w-4 h-4 text-amber-500" /> PM Surya Ghar Portal Registered
+          <span className="flex items-center gap-1.5 text-slate-300">
+            <CheckCircle2 className="w-4 h-4 text-amber-400" /> PM Surya Ghar Portal Registered
           </span>
         </div>
       </div>
