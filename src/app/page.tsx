@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar";
+import LoadingScreen from "@/components/loading-screen";
 import Hero from "@/components/sections/hero";
 import TrustStrip from "@/components/sections/trust-strip";
 import HomeSection from "@/components/sections/home-section";
@@ -21,7 +21,7 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
     <main className="bg-slate-900 min-h-screen text-white font-sans selection:bg-primary selection:text-dark">
-      <Navbar />
+      <LoadingScreen />
       <Hero />
       <TrustStrip />
       <HomeSection />

@@ -2,18 +2,39 @@
 
 import React from "react";
 import Button from "../ui/button";
+import MoltenMetal from "../MoltenMetal";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[75vh] flex items-center justify-center pt-16 pb-12 -mt-2.5 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-slate-900 text-white">
-      {/* Light glow effects */}
-      <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-primary/20 rounded-full blur-3xl -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-secondary/15 rounded-full blur-3xl -z-10 animate-pulse" />
-      
-      {/* Subtle grid lines background overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] -z-20" />
+    <section className="relative min-h-[85vh] flex items-center justify-center pt-16 pb-12 overflow-hidden bg-slate-900 text-white">
+      {/* Background MoltenMetal Shader Component */}
+      <div className="absolute inset-0 z-0 opacity-80" style={{ width: "100%", height: "100%", position: "absolute" }}>
+        <MoltenMetal
+          color1="#5227FF"
+          color2="#FF9FFC"
+          color3="#FFFFFF"
+          speed={0.35}
+          scale={4}
+          detail={3}
+          glow={1.6}
+          coreSize={0.1}
+          swirl={1}
+          fold={-0.2}
+          blackPoint={0.05}
+          brightness={1.3}
+          colorMode="molten"
+          grain
+          grainIntensity={0.05}
+          mouseInteraction
+          mouseStrength={0.3}
+          opacity={1}
+        />
+        {/* Soft overlay to ensure readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/60 to-slate-900 z-10 pointer-events-none" />
+      </div>
 
-      <div className="container mx-auto px-6 max-w-5xl relative text-center">
+      {/* Moved whole context 10px towards bottom */}
+      <div className="container mx-auto px-6 max-w-5xl relative z-20 text-center transform translate-y-[10px] mt-[10px]">
         <div className="space-y-6 max-w-4xl mx-auto">
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
@@ -25,7 +46,7 @@ export default function Hero() {
             Let the Sun Pay Instead.
           </h1>
           
-          <p className="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-sans">
+          <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-sans drop-shadow-md">
             Go solar once, and enjoy free electricity for the next 25 years. Pay just 10% upfront, and use your current monthly bill amount to pay the EMI.
           </p>
           
@@ -39,18 +60,18 @@ export default function Hero() {
           </div>
 
           {/* Quick trust metrics */}
-          <div className="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg mx-auto">
+          <div className="pt-8 grid grid-cols-3 gap-4 border-t border-white/20 max-w-lg mx-auto backdrop-blur-xs">
             <div>
               <span className="block text-2xl md:text-3xl font-numbers font-bold text-primary">25+</span>
-              <span className="text-xs text-slate-400 uppercase font-semibold">Years Warranty</span>
+              <span className="text-xs text-slate-300 uppercase font-semibold">Years Warranty</span>
             </div>
             <div>
               <span className="block text-2xl md:text-3xl font-numbers font-bold text-secondary">10%</span>
-              <span className="text-xs text-slate-400 uppercase font-semibold">Upfront Cost</span>
+              <span className="text-xs text-slate-300 uppercase font-semibold">Upfront Cost</span>
             </div>
             <div>
               <span className="block text-2xl md:text-3xl font-numbers font-bold text-accent">₹78k</span>
-              <span className="text-xs text-slate-400 uppercase font-semibold">Govt Subsidy</span>
+              <span className="text-xs text-slate-300 uppercase font-semibold">Govt Subsidy</span>
             </div>
           </div>
 
